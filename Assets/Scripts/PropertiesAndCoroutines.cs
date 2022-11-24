@@ -30,7 +30,7 @@ public class PropertiesAndCoroutines : MonoBehaviour
 
 
 
-    private void Start()
+     void Start()
     {
 
         Text__info001 = GameObject.Find("Text__info001").GetComponent<Text>();
@@ -41,19 +41,19 @@ public class PropertiesAndCoroutines : MonoBehaviour
         Text__info003.text = "";
 
         cicles = 0;
-        Vector3 randomVector = new Vector3(Random.Range(-5f, 5f), Random.Range(-5f, 5f), Random.Range(-5f, 5f));
-        StartCoroutine(Random2, randomVector,out );
+        Vector3 randomVector = new Vector3(Random.Range(-5f, 5f), Random.Range(0f, 5f), Random.Range(-5f, 5f));
+        StartCoroutine(Random2( randomVector ));
     }
 
     IEnumerator Random2(Vector3 target2)
     {
-        while (cicles < 7) {
+       
             cicles++;
             Text__info001.text = "cicles = " + cicles.ToString();
-            yield return new WaitForSeconds(3);
+         
             Text__info002.text = "Movement to target2 = " + target2.ToString();
             Movement(target2);
-        }
+     
     }
 
 
