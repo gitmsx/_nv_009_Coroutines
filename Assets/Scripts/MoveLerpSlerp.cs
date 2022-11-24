@@ -15,7 +15,8 @@ public class MoveLerpSlerp : MonoBehaviour
     [SerializeField] private GameObject Targett;
 
     private Vector3 TargetTP;
-    [SerializeField]  private  float speed;
+    [SerializeField] private float speed = 0.9f;
+    
 
 
     // Start is called before the first frame update
@@ -38,8 +39,8 @@ public class MoveLerpSlerp : MonoBehaviour
         Cube2.transform.position = Vector3.Lerp(Cube2.transform.position, TargetTP, speed * Time.deltaTime);
         Cube3.transform.position = Vector3.Slerp(Cube3.transform.position, TargetTP, speed * Time.deltaTime);
         Cube4.transform.position = Vector3.Slerp(Cube4.transform.position, TargetTP, speed * Time.deltaTime);
-        Cube5.transform.position = Vector3.MoveTowards(Cube5.transform.position, TargetTP, 11 * (speed * Time.deltaTime));
-        Cube6.transform.position = Vector3.MoveTowards(Cube6.transform.position, TargetTP, 11 * (speed * Time.deltaTime));
+        Cube5.transform.position = Vector3.MoveTowards(Cube5.transform.position, TargetTP,  (speed /Time.deltaTime) / 1000);
+        Cube6.transform.position = Vector3.MoveTowards(Cube6.transform.position, TargetTP,  (speed /Time.deltaTime) / 1000);
 
     }
 }
