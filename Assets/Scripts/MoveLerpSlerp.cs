@@ -34,12 +34,12 @@ public class MoveLerpSlerp : MonoBehaviour
 
     void MoveTo()
     {
-        Cube1.transform.position = Vector3.Lerp(transform.position, TargetTP, speed * Time.deltaTime);
-        Cube2.transform.position = Vector3.Lerp(transform.position, TargetTP, speed * Time.deltaTime);
-        Cube3.transform.position = Vector3.Slerp(transform.position, TargetTP, speed * Time.deltaTime);
-        Cube4.transform.position = Vector3.Slerp(transform.position, TargetTP, speed * Time.deltaTime);
-        Cube5.transform.position = Vector3.MoveTowards(transform.position, TargetTP, speed * Time.deltaTime);
-        Cube6.transform.position = Vector3.MoveTowards(transform.position, TargetTP, speed * Time.deltaTime);
+        Cube1.transform.position = Vector3.Lerp(Cube1.transform.position, TargetTP, speed * Time.deltaTime);
+        Cube2.transform.position = Vector3.Lerp(Cube2.transform.position, TargetTP, speed * Time.deltaTime);
+        Cube3.transform.position = Vector3.Slerp(Cube3.transform.position, TargetTP, speed * Time.deltaTime);
+        Cube4.transform.position = Vector3.Slerp(Cube4.transform.position, TargetTP, speed * Time.deltaTime);
+        Cube5.transform.position = Vector3.MoveTowards(Cube5.transform.position, TargetTP, 11 * (speed * Time.deltaTime));
+        Cube6.transform.position = Vector3.MoveTowards(Cube6.transform.position, TargetTP, 11 * (speed * Time.deltaTime));
 
     }
 }
